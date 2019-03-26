@@ -10,7 +10,7 @@ const StyledContainer = styled.div`
     align-items: center;
     /* font-size: 3rem; */
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    height: 68px;
+    height: 6.8rem; // This is equal to height of hamburger-wrapper in LayoutWithSidebar component
     background-color: #ffffff;
     /* padding: 1rem; */
     .left {
@@ -43,7 +43,7 @@ const StyledContainer = styled.div`
         li {
           list-style: none;
           margin: 0 1.5rem;
-          font-size: 16px;
+          font-size: 1.6rem;
           font-weight: 600;
           line-height: 1.19;
           color: #212121;
