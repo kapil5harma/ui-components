@@ -10,19 +10,36 @@ const Hamburger = styled.div`
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
-  div {
+  #one,
+  #two,
+  #three {
     width: 100%;
     height: 2px;
     background-color: #9e9e9e;
+  }
+  #one {
+    transform: ${props => (props.showLarge ? 'rotate(45deg)' : 'unset')};
+    transform-origin: ${props => (props.showLarge ? 'center' : 'unset')};
+    top: ${props => (props.showLarge ? '25%' : 'unset')};
+    transition: all 200ms ease 0s;
+  }
+  #two {
+    display: ${props => (props.showLarge ? 'none' : 'unset')};
+  }
+  #three {
+    transform: ${props => (props.showLarge ? 'rotate(-45deg)' : 'unset')};
+    transform-origin: ${props => (props.showLarge ? 'center' : 'unset')};
+    top: ${props => (props.showLarge ? '-25%' : 'unset')};
+    transition: all 200ms ease 0s;
   }
 `;
 
 const HamburgerToggle = props => {
   return (
-    <Hamburger className='Hamburger'>
-      <div />
-      <div />
-      <div />
+    <Hamburger className='Hamburger' showLarge={props.showLarge}>
+      <div id='one' />
+      <div id='two' />
+      <div id='three' />
     </Hamburger>
   );
 };
