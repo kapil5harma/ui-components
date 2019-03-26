@@ -35,7 +35,7 @@ const StyledCard = styled.div`
 `;
 
 const Card = props => {
-  console.log('props: ', props);
+  // console.log('props: ', props);
   const { number, text, image } = props;
 
   return (
