@@ -9,7 +9,9 @@ const StyledSideBar = styled.div`
   align-items: center;
   width: ${props => (props.showLarge ? '20rem' : '8rem')};
   height: 100vh;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  z-index: 1;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.16);
+  /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
   background-color: #ffffff;
   padding: 0 1.875rem;
   transition: all 300ms ease 0s;

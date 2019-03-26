@@ -67,7 +67,7 @@ const LayoutWithoutSideBar = props => {
   // console.log('props: ', props);
   const { children } = props;
 
-  const routeName = 'Home / Add Candidate';
+  const routeName = 'Home';
   return (
     <StyledContainer>
       <header>
