@@ -12,12 +12,11 @@ const StyledSideBar = styled.div`
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #ffffff;
   padding: 0 1.875rem;
-  transition: width 300ms ease-in-out 0s;
+  transition: all 300ms ease 0s;
   .hamburger-wrapper {
     height: 6.8rem; // This is equal to height of header in LayoutWithoutSidebar component
     display: flex;
     align-items: center;
-    align-self: ${props => (props.showLarge ? 'flex-end' : 'center')};
   }
   ul {
     padding: 0;

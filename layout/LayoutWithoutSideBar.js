@@ -8,11 +8,9 @@ const StyledContainer = styled.div`
   header {
     display: flex;
     align-items: center;
-    /* font-size: 3rem; */
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.16);
     height: 6.8rem; // This is equal to height of hamburger-wrapper in LayoutWithSidebar component
     background-color: #ffffff;
-    /* padding: 1rem; */
     .left {
       display: flex;
       align-items: center;
@@ -84,7 +82,7 @@ const LayoutWithoutSideBar = props => {
           </ul>
         </div>
       </header>
-      <ProgressBar />
+      {/* <ProgressBar /> */}
       <main>{children}</main>
     </StyledContainer>
   );
