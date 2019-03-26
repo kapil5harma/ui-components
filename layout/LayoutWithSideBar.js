@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import LayoutWithoutSideBar from './LayoutWithoutSideBar';
+import HamburgerToggle from '../hamburger/Hamburger';
 
 const StyledSideBar = styled.div`
   display: flex;
   flex-direction: column;
-  width: 24rem;
+  align-items: center;
+  width: ${props => (props.showLarge ? '20rem' : '8rem')};
   height: 100vh;
-  background: #008d9c;
-  h4 {
-    padding: 1rem;
-    margin: 0;
-    font-size: 3rem;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  padding: 0 1.875rem;
+  transition: width 300ms ease-in-out 0s;
+  .hamburger-wrapper {
+    height: 6.8rem; // This is equal to height of header in LayoutWithoutSidebar component
+    display: flex;
+    align-items: center;
+    align-self: ${props => (props.showLarge ? 'flex-end' : 'center')};
   }
   ul {
-    padding: 0 1rem;
+    padding: 0;
     li {
       list-style: none;
+      white-space: nowrap;
       font-size: 1.875rem;
       line-height: 3;
     }
@@ -26,41 +34,31 @@ const StyledLayout = styled.div`
   display: flex;
 `;
 
-const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  header {
-    font-size: 3rem;
-    background: #3d3d3d;
-    color: #f2f2f2;
-    padding: 1rem;
-  }
-  main {
-    font-size: 2rem;
-    padding: 1rem;
-  }
-`;
+class LayoutWithSideBar extends Component {
+  state = {
+    showLarge: false
+  };
 
-const LayoutWithSideBar = props => {
-  const { children } = props;
+  render() {
+    const { children } = this.props;
+    const { showLarge } = this.state;
 
-  return (
-    <StyledLayout>
-      <StyledSideBar>
-        <h4>ATS LOGO</h4>
-        <ul>
-          <li> Candidates </li>
-          <li> Interviews </li>
-          <li> Meetings</li>
-        </ul>
-      </StyledSideBar>
-      <StyledContainer>
-        <header>ATS</header>
-        <main>{children}</main>
-      </StyledContainer>
-    </StyledLayout>
-  );
-};
+    return (
+      <StyledLayout>
+        <StyledSideBar showLarge={showLarge}>
+          <div className='hamburger-wrapper' onClick={() => this.setState({ showLarge: !showLarge })}>
+            <HamburgerToggle showLarge={showLarge} />
+          </div>
+          <ul>
+            <li>{showLarge ? 'Add Candidate' : 'AC'}</li>
+            <li>{showLarge ? 'Candidate Pool' : 'CP'}</li>
+          </ul>
+        </StyledSideBar>
+        <LayoutWithoutSideBar children={children} />
+        {/* <LayoutWithoutSideBar {...children} /> */}
+      </StyledLayout>
+    );
+  }
+}
 
 export default LayoutWithSideBar;
