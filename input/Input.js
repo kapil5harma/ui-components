@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Input = styled.input`
-  border-radius: 4px;
+  border-radius: 5px;
   border: solid 1px #bdbdbd;
   width: 100%;
   max-width: ${props => (props.width ? props.width : '35rem')};
