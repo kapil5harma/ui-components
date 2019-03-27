@@ -5,6 +5,7 @@ const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  height: 100vh;
   header {
     display: flex;
     align-items: center;
@@ -53,16 +54,11 @@ const StyledContainer = styled.div`
     display: flex;
     flex: 1;
     background-color: #f1f1f2;
-    padding: 2.1rem;
+    height: 100%;
+    /* padding: 2.1rem; */
   }
 `;
 
-const ProgressBar = styled.div`
-  height: 9px;
-  border-radius: 27px;
-  background-color: #e0e0e0;
-  /* background-color: #00e676; */
-`;
 const LayoutWithoutSideBar = props => {
   // console.log('props: ', props);
   const { children } = props;
@@ -82,7 +78,6 @@ const LayoutWithoutSideBar = props => {
           </ul>
         </div>
       </header>
-      {/* <ProgressBar /> */}
       <main>{children}</main>
     </StyledContainer>
   );

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import LayoutWithoutSideBar from './LayoutWithoutSideBar';
 import HamburgerToggle from '../hamburger/Hamburger';
+import { Link } from 'react-router-dom';
 
 const StyledSideBar = styled.div`
   display: flex;
@@ -51,7 +52,9 @@ class LayoutWithSideBar extends Component {
             <HamburgerToggle showLarge={showLarge} />
           </div>
           <ul>
-            <li>{showLarge ? 'Add Candidate' : 'AC'}</li>
+            <li>
+              <Link to={'add-candidate'}>{showLarge ? 'Add Candidate' : 'AC'}</Link>
+            </li>
             <li>{showLarge ? 'Candidate Pool' : 'CP'}</li>
           </ul>
         </StyledSideBar>
