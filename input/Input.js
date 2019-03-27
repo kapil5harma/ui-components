@@ -12,7 +12,8 @@ const Input = styled.input`
   &:focus {
     border-radius: 5px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    border: solid 1px var(--warm-grey);
+    border: solid 1px var(#bdbdbd);
+    outline: none;
   }
 `;
 
