@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Input = styled.input`
   border-radius: 4px;
-  border: solid 1px #bdbdbd;
+  border: ${props => props.error ? 'solid 2px #ff032d' : 'solid 1px #bdbdbd'};
   width: 35rem;
   height: 4.8rem;
   font-size: 1.6rem;
