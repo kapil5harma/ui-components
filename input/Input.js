@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Input = styled.input`
   border-radius: 5px;
-  border: solid 1px #bdbdbd;
+  border: ${props => props.error ? 'solid 2px #ff032d' : 'solid 1px #bdbdbd'};
   width: 100%;
   max-width: ${props => (props.width ? props.width : '35rem')};
   height: 4.8rem;
@@ -14,7 +14,7 @@ const Input = styled.input`
   &:focus {
     border-radius: 5px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    border: solid 1px #9e9e9e;
+    border: solid 1px var(#bdbdbd);
     outline: none;
   }
 `;

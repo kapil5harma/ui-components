@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import ReactSVG from 'react-svg';
 import LoginForm from '../../app/auth/login';
+import ForgotPasswordForm from '../../app/auth/forgot-password';
+import ResetPasswordForm from '../../app/auth/reset-password';
 
 const ParentContainer = styled.div`
   height: 100vh;
@@ -14,7 +16,6 @@ const ParentContainer = styled.div`
 
 const FormContainer = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
   width: 100%;
@@ -28,16 +29,24 @@ const FormContainer = styled.div`
 
 const ComponentContainer = styled.div`
   margin: 1rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 class AuthLayout extends Component {
   render() {
+    console.log(this.props)
+    const { match: { path } } = this.props;
     return (
       <ParentContainer>
         <FormContainer>
-          <ComponentContainer>
-            <LoginForm />
-          </ComponentContainer>
+        {
+          path === '/auth' ? 
+          <LoginForm /> : path === '/auth/forgot' ?
+          <ForgotPasswordForm /> :
+          path === '/auth/forgot/:token' ? <ResetPasswordForm {...this.props} /> : null
+        }
           <ComponentContainer>
             <ReactSVG src='/assets/login.svg' />
           </ComponentContainer>
