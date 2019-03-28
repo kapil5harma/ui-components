@@ -9,7 +9,7 @@ const StyledCard = styled.div`
   background-color: #ffffff;
   display: flex;
   padding: 1.6rem;
-  margin: 0 3rem 1.5rem 0;
+  /* margin: 0 3rem 1.5rem 0; */
   .left {
     display: flex;
     flex: 3;
