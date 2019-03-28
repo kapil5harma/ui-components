@@ -3,10 +3,10 @@ import styled from 'styled-components';
 const Input = styled.input`
   border-radius: 5px;
   border: solid 1px #bdbdbd;
-  width: 100%;
-  max-width: ${props => (props.width ? props.width : '35rem')};
-  height: 4.8rem;
-  font-size: 1.6rem;
+  width: ${props => (props.width ? props.width : '100%')};
+  max-width: ${props => (props.maxWidth ? props.maxWidth : '35rem')};
+  height: ${props => (props.height ? props.height : '4.8rem')};
+  font-size: ${props => (props.fontSize ? props.fontSize : '1.6rem')};
   font-weight: 600;
   line-height: 1.19;
   color: #212121;
