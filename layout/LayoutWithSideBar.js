@@ -55,7 +55,9 @@ class LayoutWithSideBar extends Component {
             <li>
               <Link to={'add-candidate'}>{showLarge ? 'Add Candidate' : 'AC'}</Link>
             </li>
-            <li>{showLarge ? 'Candidate Pool' : 'CP'}</li>
+            <li>
+              <Link to={'add-candidate'}>{showLarge ? 'Candidate Pool' : 'CP'}</Link>
+            </li>
           </ul>
         </StyledSideBar>
         <LayoutWithoutSideBar children={children} />

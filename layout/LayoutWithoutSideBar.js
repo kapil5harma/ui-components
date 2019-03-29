@@ -54,7 +54,8 @@ const StyledContainer = styled.div`
     display: flex;
     flex: 1;
     background-color: #f1f1f2;
-    height: 100%;
+    /* height: 100%; */
+    height: calc(100% - 6.8rem);
     /* padding: 2.1rem; */
   }
 `;
