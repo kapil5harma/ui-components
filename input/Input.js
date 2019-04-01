@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Input = styled.input`
   border-radius: 5px;
-  border: ${props => (props.error ? props.error : 'solid 1px #bdbdbd')};
+  border: ${props => (props.error ? props.error : props.success ? props.success : 'solid 1px #bdbdbd')};
   width: ${props => (props.width ? props.width : '100%')};
   max-width: ${props => (props.maxWidth ? props.maxWidth : '35rem')};
   height: ${props => (props.height ? props.height : '4.8rem')};
