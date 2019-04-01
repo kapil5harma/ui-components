@@ -9,7 +9,7 @@ const Input = styled.input`
   font-size: ${props => (props.fontSize ? props.fontSize : '1.6rem')};
   font-weight: 600;
   line-height: 1.19;
-  color: #212121;
+  color: ${props => (props.color ? props.color : '#212121')};
   padding: 0.25rem 1rem;
   &:focus {
     border-radius: 5px;

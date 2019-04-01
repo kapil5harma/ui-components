@@ -68,11 +68,11 @@ const LayoutWithoutSideBar = props => {
   return (
     <StyledContainer>
       <header>
-        <div className='left'>
-          <div className='Logo'>ATS</div>
-          <div className='Route'>{routeName}</div>
+        <div className="left">
+          <div className="Logo">ATS</div>
+          <div className="Route">{routeName}</div>
         </div>
-        <div className='right'>
+        <div className="right">
           <ul>
             <li>My Profile</li>
             <li>Logout</li>
