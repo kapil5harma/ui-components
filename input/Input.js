@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const Input = styled.input`
   border-radius: 5px;
-  border: ${props => (props.error ? props.error : props.success ? props.success : 'solid 1px #bdbdbd')};
+  border: ${props =>
+    props.error ? props.error : props.success ? props.success : `solid 1px ${props.theme.borderDefaultColor}`};
   width: ${props => (props.width ? props.width : '100%')};
   max-width: ${props => (props.maxWidth ? props.maxWidth : '35rem')};
   height: ${props => (props.height ? props.height : '4.8rem')};
@@ -13,8 +14,8 @@ const Input = styled.input`
   padding: 0.25rem 1rem;
   &:focus {
     border-radius: 5px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    border: solid 1px var(#bdbdbd);
+    box-shadow: ${props => props.theme.boxShadow};
+    /* border: ${props => `solid 1px ${props.theme.borderDefaultColor}`}; */
     outline: none;
   }
 `;

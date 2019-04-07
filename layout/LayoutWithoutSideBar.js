@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
     align-items: center;
     box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.16);
     height: 6.8rem; // This is equal to height of hamburger-wrapper in LayoutWithSidebar component
-    background-color: #ffffff;
+    background-color: ${props => props.theme.buttonBGLight};
     .left {
       display: flex;
       align-items: center;
@@ -27,7 +27,7 @@ const StyledContainer = styled.div`
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.22;
-        color: #9e9e9e;
+        color: ${props => props.theme.textGrey};
       }
     }
     .right {
@@ -68,11 +68,11 @@ const LayoutWithoutSideBar = props => {
   return (
     <StyledContainer>
       <header>
-        <div className="left">
-          <div className="Logo">ATS</div>
-          <div className="Route">{routeName}</div>
+        <div className='left'>
+          <div className='Logo'>ATS</div>
+          <div className='Route'>{routeName}</div>
         </div>
-        <div className="right">
+        <div className='right'>
           <ul>
             <li>My Profile</li>
             <li>Logout</li>

@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const StyledCard = styled.div`
   width: 28.5rem;
   height: 15rem;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: ${props => props.theme.boxShadow};
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: ${props => props.theme.buttonBGLight};
   display: flex;
   padding: 1.6rem;
   /* margin: 0 3rem 1.5rem 0; */
@@ -19,7 +19,7 @@ const StyledCard = styled.div`
       font-size: 2rem;
       font-weight: 600;
       line-height: 2;
-      color: #9e9e9e;
+      color: ${props => props.theme.textGrey};
     }
     .text {
       font-size: 1.8rem;

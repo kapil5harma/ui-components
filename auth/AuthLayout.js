@@ -8,7 +8,7 @@ import ResetPasswordForm from '../../app/auth/reset-password';
 const ParentContainer = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: #f2f2f2;
+  background-color: ${props => props.theme.bgOffWhite};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,14 +17,14 @@ const ParentContainer = styled.div`
 const FormContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: ${props => props.theme.buttonBGLight};
   width: 100%;
   height: 100%;
   max-width: 105rem;
   max-height: 50rem;
   border-radius: 4px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  border: solid 1px #bdbdbd;
+  box-shadow: ${props => props.theme.boxShadow};
+  border: ${props => `solid 1px ${props.theme.borderDefaultColor}`};
 `;
 
 const ComponentContainer = styled.div`
@@ -36,17 +36,20 @@ const ComponentContainer = styled.div`
 
 class AuthLayout extends Component {
   render() {
-    console.log(this.props)
-    const { match: { path } } = this.props;
+    console.log(this.props);
+    const {
+      match: { path }
+    } = this.props;
     return (
       <ParentContainer>
         <FormContainer>
-        {
-          path === '/auth' ? 
-          <LoginForm /> : path === '/auth/forgot' ?
-          <ForgotPasswordForm /> :
-          path === '/auth/forgot/:token' ? <ResetPasswordForm {...this.props} /> : null
-        }
+          {path === '/auth' ? (
+            <LoginForm />
+          ) : path === '/auth/forgot' ? (
+            <ForgotPasswordForm />
+          ) : path === '/auth/forgot/:token' ? (
+            <ResetPasswordForm {...this.props} />
+          ) : null}
           <ComponentContainer>
             <ReactSVG src='/assets/login.svg' />
           </ComponentContainer>

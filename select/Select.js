@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Select = styled.select`
   border-radius: 4px;
-  border: solid 1px #bdbdbd;
+  border: ${props => `solid 1px ${props.theme.borderDefaultColor}`};
   width: 100%;
   max-width: ${props => (props.width ? props.width : '35rem')};
   height: 4.8rem;
@@ -14,7 +14,7 @@ const Select = styled.select`
 
   &:focus {
     border-radius: 5px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: ${props => props.theme.boxShadow};
     border: solid 1px #9e9e9e;
     outline: none;
   }

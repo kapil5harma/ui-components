@@ -15,7 +15,7 @@ const Hamburger = styled.div`
   #three {
     width: 100%;
     height: 2px;
-    background-color: #9e9e9e;
+    background-color: ${props => props.theme.bgGrey};
   }
   #one {
     transform: ${props => (props.showLarge ? 'rotate(45deg)' : 'unset')};

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const TextArea = styled.textarea`
   border-radius: 5px;
-  border: solid 1px #bdbdbd;
+  border: ${props => `solid 1px ${props.theme.borderDefaultColor}`};
   width: ${props => (props.width ? props.width : '100%')};
   max-width: ${props => (props.maxWidth ? props.maxWidth : '35rem')};
   height: ${props => (props.height ? props.height : '7.8rem')};
@@ -13,7 +13,7 @@ const TextArea = styled.textarea`
   padding: 0.25rem 1rem;
   &:focus {
     border-radius: 5px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: ${props => props.theme.boxShadow};
     border: solid 1px #9e9e9e;
     outline: none;
   }
