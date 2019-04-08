@@ -3,6 +3,7 @@ const theme = {
   textDark: '#424242',
   textLight: '#ffffff',
   textGrey: '#9e9e9e',
+  textLightGrey: '#bdbdbd',
 
   // BG Colors
   bgLight: '#ffffff',
