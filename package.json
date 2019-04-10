@@ -1,0 +1,28 @@
+{
+  "name": "ui-components",
+  "version": "1.0.0",
+  "description": "React UI Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.recro.io:common-components/ui-components.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "^5.0.6",
+    "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-links": "^5.0.6",
+    "@storybook/addons": "^5.0.6",
+    "@babel/core": "^7.4.3",
+    "babel-loader": "^8.0.5"
+  }
+}
