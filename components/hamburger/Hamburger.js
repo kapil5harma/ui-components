@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Hamburger = styled.div`
+const StyledHamburger = styled.div`
   width: 22.1px;
   height: 14.7px;
   display: flex;
@@ -34,14 +34,14 @@ const Hamburger = styled.div`
   }
 `;
 
-const HamburgerToggle = props => {
+const Hamburger = props => {
   return (
-    <Hamburger className='Hamburger' showLarge={props.showLarge}>
+    <StyledHamburger className='hamburger' showLarge={props.showLarge}>
       <div id='one' />
       <div id='two' />
       <div id='three' />
-    </Hamburger>
+    </StyledHamburger>
   );
 };
 
-export default HamburgerToggle;
+export default Hamburger;
